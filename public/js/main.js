@@ -58,6 +58,7 @@ $(document).ready(function() {
   navigator.getUserMedia({video: true, audio: true}, function(stream) {
     var video = $('#video')[0];
     video.src = window.URL.createObjectURL(stream);
+    video.play();
     callConnectedPeople(stream);
 
   }, function(err) {
