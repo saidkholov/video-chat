@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var connections = [];
-  var peer = new Peer([], {host: 'pure-tundra-43018.herokuapp.com', port: 80, path: `/peer` });
+  var peer = new Peer([], {host: 'pure-tundra-43018.herokuapp.com', port: 443, path: `/peer` });
 
   function addMessage(message, type="other") {
     var messageHtml = `<li class="mar-btm">
