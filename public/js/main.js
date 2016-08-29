@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var connections = [];
-  var peer = new Peer([], {host: 'pure-tundra-43018.herokuapp.com', port: 443, path: `/peer` });
+  var peer = new Peer([], {host: 'ec2-54-206-49-36.ap-southeast-2.compute.amazonaws.com', port: 3030, path: `/peer` });
 
   function addMessage(message, type="other") {
     var messageHtml = `<li class="mar-btm">
@@ -63,7 +63,6 @@ $(document).ready(function() {
   }, function(err) {
     console.log('Failed to get local stream' ,err);
   });
-
   peer.on('call', function(call) {
     navigator.getUserMedia({video: true, audio: true}, function(stream) {
       if (call.metadata.room === room) {
