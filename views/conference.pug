@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1 Scrum Video
+  .col-md-12.col-lg-6
+    .panel
+      // Heading
+      .panel-heading
+        .panel-control
+          .btn-group
+            button.btn.btn-default(type='button', data-toggle='collapse', data-target='#demo-chat-body')
+              i.fa.fa-chevron-down
+        h3.panel-title Chat
+      // Widget body
+      #demo-chat-body.collapse
+        .nano.has-scrollbar(style='height:380px')
+          .nano-content.pad-all(tabindex='0', style='right: -17px;')
+            ul.list-unstyled.media-block
+          .nano-pane
+            .nano-slider(style='height: 141px; transform: translate(0px, 0px);')
+        // Widget footer
+        .panel-footer
+          .row
+            .col-xs-9
+              input.form-control.chat-input(type='text', id="message" placeholder='Enter your text')
+            .col-xs-3
+              button.btn.btn-primary.btn-block(type='button' id="send") Send
+  p
+    button(id="share-screen" class="btn btn-primary").
+      Share screen
+  .col-sm-12
+    video#video(class="col-sm-3" muted controls)
+    div#videos
+
+  script(type='text/javascript').
+    var room='#{room}'
+  script(src='/js/main.js')
+
