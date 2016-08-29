@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var connections = [];
-  var peer = new Peer([], {host: 'ec2-54-206-49-36.ap-southeast-2.compute.amazonaws.com', port: 3030, path: `/peer` });
+  var peer = new Peer([], {host: 'ec2-54-206-23-186.ap-southeast-2.compute.amazonaws.com', port: 3030, path: `/peer` });
 
   function addMessage(message, type="other") {
     var messageHtml = `<li class="mar-btm">
